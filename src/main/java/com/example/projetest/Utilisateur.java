@@ -10,8 +10,14 @@ public class Utilisateur {
     private StringProperty nom;
     private StringProperty email;
 
-    public Utilisateur(int id, String nom, String email) {
+    public Utilisateur() {
         this.id = new SimpleIntegerProperty();
+        this.nom = new SimpleStringProperty();
+        this.email = new SimpleStringProperty();
+    }
+
+    public Utilisateur(int id, String nom, String email) {
+        this.id = new SimpleIntegerProperty(id);
         this.nom = new SimpleStringProperty(nom);
         this.email = new SimpleStringProperty(email);
     }
